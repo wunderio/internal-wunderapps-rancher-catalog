@@ -1,0 +1,51 @@
+.catalog:
+  name: "Athena [Weaver]"
+  version: "v2.9.2"
+  description: "Athena PDF conversion as a service, using weaver"
+  uuid: athenaweaver-0
+  questions:
+    # GIN_MODE: "debug"
+    - variable: "GIN_MODE"
+      label: "GIN Mode"
+      required: false
+      type: "string"
+      default: "debug"
+    # WEAVER_AUTH_KEY: "arachnys-weaver"
+    - variable: "WEAVER_AUTH_KEY"
+      label: "WEAVER_AUTH_KEY"
+      required: true
+      type: "string"
+      default: "arachnys-weaver"
+    # WEAVER_ATHENA_CMD: "athenapdf -S"
+    - variable: "WEAVER_ATHENA_CMD"
+      label: "WEAVER_ATHENA_CMD"
+      required: false
+      type: "string"
+      default: "athenapdf -S"
+    # WEAVER_MAX_WORKERS: 10
+    - variable: "WEAVER_MAX_WORKERS"
+      label: "WEAVER_MAX_WORKERS"
+      required: false
+      type: "int"
+      default: 10
+    # WEAVER_MAX_CONVERSION_QUEUE: 50
+    - variable: "WEAVER_MAX_CONVERSION_QUEUE"
+      label: "WEAVER_MAX_CONVERSION_QUEUE"
+      required: false
+      type: "string"
+      default: 50
+    # WEAVER_WORKER_TIMEOUT: 90
+    - variable: "WEAVER_WORKER_TIMEOUT"
+      label: "WEAVER_WORKER_TIMEOUT"
+      required: false
+      type: "int"
+      default: 90
+    # WEAVER_CONVERSION_FALLBACK: "false"
+    - variable: "WEAVER_CONVERSION_FALLBACK"
+      label: "WEAVER_CONVERSION_FALLBACK"
+      required: false
+      type: "string"
+      default: "false"
+
+weaver:
+  scale: 0
