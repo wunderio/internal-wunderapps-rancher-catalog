@@ -1,8 +1,13 @@
-.catalog:
-  name: "Athena [Weaver]"
-  version: "v2.9.2"
+version: "2"
+
+catalog:
+  name: "Athena - Weaver"
+  version: 0
   description: "Athena PDF conversion as a service, using weaver"
   uuid: athenaweaver-0
+
+  minimum_rancher_version: # The minimum version of Rancher that supports the template
+
   questions:
     # GIN_MODE: "debug"
     - variable: "GIN_MODE"
